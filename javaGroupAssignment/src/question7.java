@@ -15,6 +15,7 @@ public class question7 {
 
         for(int i = 0; i<8; i++){
             for(int j = 0; j<7; j++){
+                //Adding employee hours to find total hours
                 empTotalHours[i] += employeeHours[i][j];
             }
         }
@@ -22,10 +23,13 @@ public class question7 {
         for(int i=0; i<8;i++){
             for(int l=i+1;l<8;l++){
                 if(empTotalHours[i]>empTotalHours[l]){
+                    
+                    //Ordering the employeeHours
                     int temp [] = employeeHours[i];
                     employeeHours[i]=employeeHours[l];
                     employeeHours[l]=temp;
-                    
+
+                    //Ordering the employee Total hours
                     int temp1 = empTotalHours[i];
                     empTotalHours[i]=empTotalHours[l];
                     empTotalHours[l]=temp1;
@@ -35,8 +39,11 @@ public class question7 {
 
         for(int i=0; i<8; i++){
             for(int j=0; j<7; j++){
+                //Display employee hours
                 System.out.print(employeeHours[i][j]+" ");
             }
+            
+            //Display employee total hours
             System.out.println(empTotalHours[i]);
         }
     
